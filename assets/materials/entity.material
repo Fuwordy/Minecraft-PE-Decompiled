@@ -1,0 +1,45 @@
+{
+	"entity_static": {
+		"vertexShader" : "shaders/entity.vertex",
+		"fragmentShader" : "shaders/entity.fragment"
+	},
+
+	"entity:entity_static": {
+		"defines":["USE_OVERLAY"]
+	},
+
+	"entity_nocull:entity": {
+		"states":["DisableCulling"],
+
+		"defines":["FLIP_BACKFACES"]
+	},
+
+	"entity_alphatest:entity_nocull": {
+		"defines":["ALPHA_TEST"]
+	},
+
+	"entity_emissive:entity": {
+		"defines":["USE_EMISSIVE"]
+	},
+
+	"entity_emissive_alpha:entity_nocull": {
+		"defines":[
+			"ALPHA_TEST",
+			"USE_EMISSIVE"]
+	},
+
+	"slime_outer:entity": {
+		"states" : ["Blending"]
+	},
+
+	"item_in_hand:entity": {
+		"defines": ["COLOR_BASED"]
+	},
+
+	"heavy_tile:entity_static": {
+		"states":["PolygonOffset"],
+
+		"polygonOffsetLevel":-6
+	}
+}
+
